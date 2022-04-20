@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BuildQuestionsController">
+   <children>
+      <ImageView fitHeight="659.0" fitWidth="1160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Question%20table.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="Table" layoutX="48.0" layoutY="284.0" onMousePressed="#selectQuestion" prefHeight="237.0" prefWidth="1064.0">
+        <columns>
+            <TableColumn fx:id="QuestCodeTable" prefWidth="93.0" text="Question Code" />
+          <TableColumn fx:id="QuestNumTable" prefWidth="92.0" text="Question Num." />
+          <TableColumn fx:id="QuestSubjectTable" minWidth="0.0" prefWidth="71.0" text="subject" />
+            <TableColumn fx:id="QuestionTable" prefWidth="75.0" text="Question" />
+            <TableColumn fx:id="QuestInstTable" prefWidth="136.0" text="Question Instructions" />
+            <TableColumn fx:id="Answers" prefWidth="362.0" text="Answers">
+               <columns>
+                  <TableColumn fx:id="Answers1Table" prefWidth="67.0" text="Answers 1" />
+                  <TableColumn fx:id="Answers2Table" prefWidth="68.0" text="Answers 2" />
+                  <TableColumn fx:id="Answers3Table" prefWidth="73.0" text="Answers 3" />
+                  <TableColumn fx:id="Answers4Table" prefWidth="84.0" text="Answers 4" />
+               </columns></TableColumn>
+            <TableColumn fx:id="RightAnswerTable" prefWidth="97.0" text="The right answer" />
+            <TableColumn fx:id="AuthorTable" prefWidth="122.0" text="Author" />
+            <TableColumn fx:id="pointTable" prefWidth="85.0" text="points" />
+        </columns>
+      </TableView>
+      <Button fx:id="CEMSButton" layoutX="-3.0" layoutY="-4.0" mnemonicParsing="false" onAction="#PressCEMS" prefHeight="143.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="DeleteQuestionButton" layoutX="34.0" layoutY="623.0" mnemonicParsing="false" onAction="#DeleteQuestion" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="UpdateQuestionButton" layoutX="34.0" layoutY="579.0" mnemonicParsing="false" onAction="#UpdateQuestion" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="AddQuestionButton" layoutX="34.0" layoutY="536.0" mnemonicParsing="false" onAction="#AddNewQuestion" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="SignOutButton" layoutX="1039.0" layoutY="2.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="SerchBySubjectButton" layoutX="540.0" layoutY="245.0" minWidth="22.0" mnemonicParsing="false" onAction="#SearchBySubject" prefHeight="25.0" prefWidth="22.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="598.0" />
+      <Button fx:id="SerchByTeacherButton" layoutX="540.0" layoutY="211.0" minWidth="22.0" mnemonicParsing="false" onAction="#SearchByTeacher" prefHeight="31.0" prefWidth="22.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="SerchByTeacherTXT" layoutX="249.0" layoutY="214.0" prefHeight="25.0" prefWidth="279.0" />
+      <TextField fx:id="SerchBySubjectTXT" layoutX="249.0" layoutY="245.0" prefHeight="25.0" prefWidth="279.0" />
+      <Label fx:id="ErrorLBL" layoutX="211.0" layoutY="627.0" prefHeight="17.0" prefWidth="230.0" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

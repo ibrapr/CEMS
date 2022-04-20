@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TeacherExamStatisticsController">
+   <children>
+      <ImageView fitHeight="579.0" fitWidth="1200.0">
+         <image>
+            <Image url="@../Images/ExamStatistics.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="SignOutBTN" layoutX="1067.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="SearchByCourseNameTXT" layoutX="245.0" layoutY="159.0" prefHeight="31.0" prefWidth="302.0" />
+      <Button fx:id="SearchBTN" layoutX="547.0" layoutY="159.0" mnemonicParsing="false" onAction="#Search" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="ReturnBTN" layoutX="129.0" layoutY="461.0" mnemonicParsing="false" onAction="#PressBack" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="GetReportBTN" layoutX="851.0" layoutY="461.0" mnemonicParsing="false" onAction="#PressReport" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <TableView fx:id="ExamsTable" layoutX="4.0" layoutY="211.0" onMousePressed="#selectExam" prefHeight="238.0" prefWidth="1190.0">
+        <columns>
+          <TableColumn fx:id="ExamCodeTable" minWidth="0.0" prefWidth="108.0" text="Exam code" />
+          <TableColumn fx:id="ExamNumberTable" prefWidth="117.0" text="Exam number" />
+            <TableColumn fx:id="SubjectTable" prefWidth="65.0" text="Subject" />
+            <TableColumn fx:id="CourseTable" prefWidth="73.0" text="Course" />
+            <TableColumn fx:id="ExamTimeTable" prefWidth="90.0" text="Exam time" />
+            <TableColumn fx:id="AuthorTable" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="ChoseQuestionNumberTable" prefWidth="225.0" text="Chosen question number" />
+            <TableColumn fx:id="QuestionPointsTable" prefWidth="129.0" text="Question point" />
+            <TableColumn fx:id="StudentInstructionTable" prefWidth="152.0" text="Student instructions" />
+            <TableColumn fx:id="TeacherInstructionTable" prefWidth="155.0" text="Teacher instructions" />
+        </columns>
+      </TableView>
+      <Button fx:id="CEMSButton" layoutX="-1.0" mnemonicParsing="false" onAction="#PressCEMS" prefHeight="117.0" prefWidth="157.0" style="-fx-background-color: transparent;" />
+      <Label fx:id="ErrorLbl" layoutX="851.0" layoutY="503.0" prefHeight="17.0" prefWidth="195.0" text="please chose any Exam!" textFill="RED" visible="false" />
+
+      <Label fx:id="ErrorLbl" layoutX="851.0" layoutY="502.0" text="Label" textFill="RED" visible="false" />
+      <Button fx:id="ApprovalBTN" layoutX="962.0" layoutY="159.0" mnemonicParsing="false" onAction="#PressApproval" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="StatusBTN" layoutX="700.0" layoutY="159.0" mnemonicParsing="false" onAction="#PressStatus" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="commonmistakeBTN" layoutX="455.0" layoutY="461.0" mnemonicParsing="false" onAction="#PressCommonMistake" prefHeight="31.0" prefWidth="195.0" style="-fx-background-color: transparent;" />
+   </children>
+</Pane>
